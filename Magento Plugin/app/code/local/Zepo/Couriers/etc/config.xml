@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Zepo_Couriers>
+            <version>0.1.1</version>
+        </Zepo_Couriers>
+    </modules>
+	
+    <frontend>
+        <routers>
+            <couriers>
+                <use>standard</use>
+                <args>
+                    <module>Zepo_Couriers</module>
+                    <frontName>couriers</frontName>
+                </args>
+            </couriers>
+        </routers>
+        <layout>
+            <updates>
+                <couriers>
+                    <file>couriers.xml</file>
+                </couriers>
+            </updates>
+        </layout>
+    </frontend>
+	
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Zepo_Couriers>
+                            <title>Couriers Module</title>
+                            <sort_order>10</sort_order>
+                        </Zepo_Couriers>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <events>
+            <core_block_abstract_prepare_layout_before>
+                <observers>
+                    <customgrid_column_append>
+                        <type>model</type>
+                        <class>Zepo_Couriers_Model_Observer</class>
+                        <method>appendSalesGridColumn</method>
+                    </customgrid_column_append>
+                </observers>
+            </core_block_abstract_prepare_layout_before>
+        </events>
+    </adminhtml>
+	
+    <global>
+	
+        <helpers>
+            <couriers>
+                <class>Zepo_Couriers_Helper</class>
+            </couriers>
+        </helpers>
+        <blocks>
+            <couriers>
+                <class>Zepo_Couriers_Block</class>
+            </couriers>
+        </blocks>
+
+		<!--	KP-MYSQL START	-->
+		<models>
+			<couriers>
+				<class>Zepo_Couriers_Model</class>
+				<!--<resourceModel>zepo_couriers_mysql4</resourceModel>-->
+				<resourceModel>couriers_mysql4</resourceModel>
+			</couriers>
+			<couriers_mysql4>
+				<class>Zepo_Couriers_Model_Mysql4</class>
+					<entities>
+						<couriers>
+							<table>couriers</table>
+						</couriers>
+					</entities>
+			</couriers_mysql4>
+		</models>
+		
+	 
+		<resources>
+	 
+		  <!-- Declaring module setup handler -->
+		  <!-- &#91;start&#93; -->
+		  <couriers_setup>
+			<setup>
+			  <module>Zepo_Couriers</module>
+			</setup>
+			<connection>
+			  <use>core_setup</use>
+			</connection>
+		  </couriers_setup>
+		  <!-- &#91;End&#93; -->
+	 
+		  <couriers_write>
+			<connection>
+			  <use>core_write</use>
+			</connection>
+		  </couriers_write>
+	 
+		  <couriers_read>
+			<connection>
+			  <use>core_read</use>
+			</connection>
+		  </couriers_read>
+	 
+		</resources>
+		
+		<!--	KP-MYSQL END	-->
+		
+    </global>
+	
+</config>
