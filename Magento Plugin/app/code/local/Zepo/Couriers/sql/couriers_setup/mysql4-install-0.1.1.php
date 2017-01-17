@@ -6,9 +6,9 @@
  
   $installer->run("
   
-	DROP TABLE IF EXISTS {$this->getTable('couriers')};
+	-- DROP TABLE IF EXISTS `couriers`;
 	
-	CREATE TABLE IF NOT EXISTS {$this->getTable('couriers')} (
+	CREATE TABLE `couriers` (
 	  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
 	  `order_id` varchar(20) DEFAULT NULL,
 	  `dispatch_date` datetime DEFAULT NULL,
