@@ -22,6 +22,6 @@ Magento supported version  1.9.x
 -	For production environment comment line number number 8 and uncomment line number 10.
 
  
-4. Clear the Cache and Run Compilation.
+4. Clear the Cache and Run Compilation. - IMPORTANT DO NOT SKIP THIS STEP
  
 5. After you have installed plugin, logout from admin and login again.
