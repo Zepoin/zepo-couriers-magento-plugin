@@ -11,7 +11,7 @@ Magento supported version  1.9.x
  
 3. For updating your Zepo Couriers crediantials 
 
-	Go to file app\design\frontend\base\default\template\couriers\index.php and edit the folloing lines :
+-	Go to file app\design\frontend\base\default\template\couriers\index.php and edit the folloing lines :
 
 -	Edit line number 4 for API Key which will provided to you by Zepo Couriers.
 
@@ -21,7 +21,6 @@ Magento supported version  1.9.x
 
 -	For production environment comment line number number 8 and uncomment line number 10.
 
- 
-4. Clear the Cache and Run Compilation. - IMPORTANT DO NOT SKIP THIS STEP.
+4. Clear Magento Cache and Run Compilation. - DO NOT SKIP THIS STEP
  
 5. After you have installed plugin, logout from admin and login again.
