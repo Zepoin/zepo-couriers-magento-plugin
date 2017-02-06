@@ -8,7 +8,7 @@
   
 	-- DROP TABLE IF EXISTS `couriers`;
 	
-	CREATE TABLE `couriers` (
+	CREATE TABLE {$this->getTable('couriers')} (
 	  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
 	  `order_id` varchar(20) DEFAULT NULL,
 	  `dispatch_date` datetime DEFAULT NULL,
