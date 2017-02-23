@@ -14,5 +14,3 @@
   ");
  
   $installer->endSetup();
-  
-?>

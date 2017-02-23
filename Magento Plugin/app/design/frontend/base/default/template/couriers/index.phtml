@@ -4,10 +4,8 @@
 	$api_key	=	"";		// ADD YOUR API KEY HERE
 	
 	$secret_key	=	"";		// ADD YOUR SECRET KEY HERE				
-	
-	$post_url	=	"http://api.couriers.vello.in/initiateShipmentRequest";	// TESTING ENVIRONMENT 
-	
-	//$post_url	=	"http://api.couriers.zepo.in/initiateShipmentRequest";	// PRODUCTION ENVIRONMENT
+		
+	$post_url	=	"http://api.couriers.zepo.in/initiateShipmentRequest";	// PRODUCTION ENVIRONMENT
 
 	$strtoSign	=	"POST\n/initiateShipmentRequest";
 	
@@ -27,15 +25,18 @@
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data );  //Post Fields
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-	$headers = [
-	    'Accept-Encoding: gzip, deflate',
-	    'Accept-Language: en-US,en;q=0.5',
-	    'Cache-Control: no-cache',
-	    'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0',
-	    'X-MicrosoftAjax: Delta=true',
-	    $header,
-	    'Content-Type:application/json',
-	];
+	// $headers = [
+	    // 'Accept-Encoding: gzip, deflate',
+	    // 'Accept-Language: en-US,en;q=0.5',
+	    // 'Cache-Control: no-cache',
+	    // 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0',
+	    // 'X-MicrosoftAjax: Delta=true',
+	    // $header,
+	    // 'Content-Type:application/json',
+	// ];
+	
+	$headers	=	array("Accept-Encoding: gzip, deflate","Accept-Language: en-US,en;q=0.5","Cache-Control: no-cache","User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0","User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0","X-MicrosoftAjax: Delta=true",$header,"Content-Type:application/json");
+	
 		
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 	$server_output = curl_exec ($ch);

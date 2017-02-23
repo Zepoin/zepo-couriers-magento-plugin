@@ -60,21 +60,19 @@ class Zepo_Couriers_IndexController extends Mage_Core_Controller_Front_Action {
 		
         $insertId = $model->save()->getId();
 		
-        echo "Data successfully inserted. Insert ID: " . $insertId;
+        //	echo "Data successfully inserted. Insert ID: " . $insertId;
 		
 		$logres	=	"Data successfully inserted. Insert ID: " . $insertId;
 		
     }	catch (Exception $e)	{
 		
-        echo $e->getMessage();
+        //	echo $e->getMessage();
 		
 		$logres	=	$e->getMessage();
 		
     }
 	
 	Mage::log($logres, null, 'successZepo.log', true);
-	
-	exit;
 
     }
 
@@ -86,10 +84,10 @@ class Zepo_Couriers_IndexController extends Mage_Core_Controller_Front_Action {
     public function failAction() {
         
         $data = Mage::app()->getRequest()->getParams();
-        echo "<pre>";
+        //	echo "<pre>";
         Mage::log(print_r( $data , 1), null, 'failZepo.log');
         print_r($data);
-        exit;
+		//	exit;
 
     }
 

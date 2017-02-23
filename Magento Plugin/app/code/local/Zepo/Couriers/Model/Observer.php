@@ -34,4 +34,3 @@ class Zepo_Couriers_Model_Observer extends Varien_Event_Observer {
 
 }
 
-?>

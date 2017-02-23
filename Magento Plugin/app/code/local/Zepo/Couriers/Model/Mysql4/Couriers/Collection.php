@@ -8,5 +8,3 @@ class Zepo_Couriers_Model_Mysql4_Couriers_Collection extends Mage_Core_Model_Mys
          $this->_init('couriers/couriers');
      }
 }
-
-?>
