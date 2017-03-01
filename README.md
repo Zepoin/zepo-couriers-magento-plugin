@@ -17,10 +17,6 @@ Magento supported version  1.9.x
 
 -	Edit line number 6 for Secret Key which will provided to you by Zepo Couriers.
 
--	Choose the environment Production/Testing. By default Testing will be selected.
-
--	For production environment comment line number number 8 and uncomment line number 10.
-
 4. Clear Magento Cache and Run Compilation. - DO NOT SKIP THIS STEP
  
 5. After you have installed plugin, logout from admin and login again.
