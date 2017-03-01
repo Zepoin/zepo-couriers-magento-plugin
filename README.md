@@ -11,7 +11,7 @@ Magento supported version  1.9.x
  
 3. For updating your Zepo Couriers crediantials 
 
--	Go to file app\design\frontend\base\default\template\couriers\index.php and edit the folloing lines :
+-	Go to file app\design\frontend\base\default\template\couriers\index.phtml and edit the folloing lines :
 
 -	Edit line number 4 for API Key which will provided to you by Zepo Couriers.
 
