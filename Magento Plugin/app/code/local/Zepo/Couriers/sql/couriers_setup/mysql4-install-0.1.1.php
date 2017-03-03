@@ -10,7 +10,7 @@
 	
 	CREATE TABLE {$this->getTable('couriers')} (
 	  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-	  `order_id` varchar(20) DEFAULT NULL,
+	  `order_id` varchar(50) DEFAULT NULL,
 	  `dispatch_date` datetime DEFAULT NULL,
 	  `delivery_date` datetime DEFAULT NULL,
 	  `courier_name` varchar(100) DEFAULT NULL,
