@@ -111,7 +111,13 @@ class Zepo_Couriers_Block_Index extends Mage_Core_Block_Template{
         $arr['delivery_address']['pincode'] = $shipping->getPostcode();
         $arr['delivery_address']['country'] = $shipping->getCountryId();
         $arr['delivery_address']['contact_no'] = $shipping->getTelephone();
-        $arr['delivery_address']['email'] = $shipping->getEmail();
+	
+		$email = $shipping->getEmail();
+		
+		if (!$email) $email = $order->getCustomerEmail();
+		
+		$arr['delivery_address']['email'] = $email;
+		
 
         $arr['success_callback_url'] = Mage::getBaseUrl(). 'couriers/index/success';
         $arr['failure_callback_url'] = Mage::getBaseUrl(). 'couriers/index/fail';
