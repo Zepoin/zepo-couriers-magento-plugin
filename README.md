@@ -1,6 +1,6 @@
 # Supported Versions
 
-Magento supported version  1.9.x
+Magento supported version  1.7.x - 1.9.x
 
 
 # Installation and Configuration
@@ -9,14 +9,6 @@ Magento supported version  1.9.x
 
 2. If you have a linux server make sure the Folder permission are set to 755 and file permission to 644.
  
-3. For updating your Zepo Couriers crediantials 
-
--	Go to file app\design\frontend\base\default\template\couriers\index.phtml and edit the folloing lines :
-
--	Edit line number 4 for API Key which will provided to you by Zepo Couriers.
-
--	Edit line number 6 for Secret Key which will provided to you by Zepo Couriers.
-
-4. Clear Magento Cache and Run Compilation. - DO NOT SKIP THIS STEP
+3. Clear Magento Cache and Run Compilation. - DO NOT SKIP THIS STEP
  
-5. After you have installed plugin, logout from admin and login again.
+4. After you have installed plugin, logout from admin and login again.
